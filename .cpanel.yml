@@ -1,0 +1,5 @@
+---
+deployment:
+      tasks:
+        - export DEPLOYPATH=/home1/gayatrif/public_html
+        - /bin/cp -r /home/gayatrif/<repositories>/<repo>/* $DEPLOYPATH
