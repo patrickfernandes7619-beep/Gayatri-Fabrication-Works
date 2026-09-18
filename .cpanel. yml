@@ -2,5 +2,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/gayatrif/public_html
+    - export DEPLOYPATH=/home4/gayatrif/public_html
     - /bin/cp -R * $DEPLOYPATH
