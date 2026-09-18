@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onSelectCategory 
           <div className="space-y-4">
             <div className="bg-white p-2 rounded-sm inline-block">
               <img
-                src="/images/gayatri-logo.jpg"
+                src="./images/gayatri-logo.jpg"
                 alt="Gayatri Fabrication Works"
                 className="h-14 w-auto object-contain"
               />

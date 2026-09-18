@@ -97,7 +97,7 @@ export const Header: React.FC<HeaderProps> = ({
               title="Gayatri Fabrication Works Logo"
             >
               <img 
-                src="/images/gayatri-logo.jpg" 
+                src="./images/gayatri-logo.jpg" 
                 alt="Gayatri Fabrication Works Red and White Logo" 
                 className="h-16 sm:h-20 w-auto object-contain drop-shadow-xs"
               />
@@ -120,7 +120,7 @@ export const Header: React.FC<HeaderProps> = ({
               title="GF Logo Symbol"
             >
               <img 
-                src="/images/logo-2.jpg" 
+                src="./images/logo-2.jpg" 
                 alt="GF Red and Blue Logo" 
                 className="h-14 sm:h-16 w-auto object-contain drop-shadow-xs"
               />
@@ -136,7 +136,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => handleNavClick('home')}
             >
               <img 
-                src="/images/gayatri-logo.jpg" 
+                src="./images/gayatri-logo.jpg" 
                 alt="Gayatri Fabrication Works Logo" 
                 className="h-16 md:h-20 w-auto object-contain"
                 onError={(e) => {
@@ -161,7 +161,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => handleNavClick('home')}
             >
               <img 
-                src="/images/logo-2.jpg" 
+                src="./images/logo-2.jpg" 
                 alt="GF Logo Symbol" 
                 className="h-14 md:h-16 w-auto object-contain"
               />

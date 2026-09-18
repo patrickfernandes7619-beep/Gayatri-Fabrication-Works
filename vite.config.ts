@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Relative base path ensures the app works on GitHub Pages subpaths (e.g. username.github.io/repo-name/),
+    // custom domains, and standard root hosting without broken asset URLs.
+    base: process.env.BASE_PATH || './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

@@ -62,7 +62,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigateTab }) => 
           <div className="relative group">
             <div className="rounded-sm overflow-hidden border-2 border-gray-200 shadow-md bg-gray-100">
               <img
-                src="/images/Untitled-1.jpg"
+                src="./images/Untitled-1.jpg"
                 alt="Gayatri Fabrication Works Workshop & Production Facility"
                 className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-300"
               />
