@@ -139,7 +139,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigateTab }) => 
               onClick={() => onNavigateTab('clientele')}
               className="bg-white/10 hover:bg-white/20 text-white text-xs font-bold px-4 py-3 rounded-sm transition-colors uppercase tracking-wider"
             >
-              View Clientele (50+)
+              View Clientele
             </button>
           </div>
         </div>

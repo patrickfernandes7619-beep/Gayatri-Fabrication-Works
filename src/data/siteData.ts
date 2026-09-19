@@ -432,24 +432,6 @@ export const CLIENT_LOGOS: ClientLogo[] = [
     "alt": "Gayatri Fabrication Works Client 3"
   },
   {
-    "id": 6,
-    "filename": "6.jpg",
-    "src": "./images/6.jpg",
-    "alt": "Gayatri Fabrication Works Client 6"
-  },
-  {
-    "id": 7,
-    "filename": "7.jpg",
-    "src": "./images/7.jpg",
-    "alt": "Gayatri Fabrication Works Client 7"
-  },
-  {
-    "id": 8,
-    "filename": "8.jpg",
-    "src": "./images/8.jpg",
-    "alt": "Gayatri Fabrication Works Client 8"
-  },
-  {
     "id": 9,
     "filename": "9.jpg",
     "src": "./images/9.jpg",
@@ -634,48 +616,6 @@ export const CLIENT_LOGOS: ClientLogo[] = [
     "filename": "44.jpg",
     "src": "./images/44.jpg",
     "alt": "Gayatri Fabrication Works Client 44"
-  },
-  {
-    "id": 46,
-    "filename": "46.jpg",
-    "src": "./images/46.jpg",
-    "alt": "Gayatri Fabrication Works Client 46"
-  },
-  {
-    "id": 47,
-    "filename": "47.jpg",
-    "src": "./images/47.jpg",
-    "alt": "Gayatri Fabrication Works Client 47"
-  },
-  {
-    "id": 49,
-    "filename": "49.jpg",
-    "src": "./images/49.jpg",
-    "alt": "Gayatri Fabrication Works Client 49"
-  },
-  {
-    "id": 50,
-    "filename": "50.jpg",
-    "src": "./images/50.jpg",
-    "alt": "Gayatri Fabrication Works Client 50"
-  },
-  {
-    "id": 51,
-    "filename": "51.jpg",
-    "src": "./images/51.jpg",
-    "alt": "Gayatri Fabrication Works Client 51"
-  },
-  {
-    "id": 52,
-    "filename": "52.jpg",
-    "src": "./images/52.jpg",
-    "alt": "Gayatri Fabrication Works Client 52"
-  },
-  {
-    "id": 53,
-    "filename": "53.jpg",
-    "src": "./images/53.jpg",
-    "alt": "Gayatri Fabrication Works Client 53"
   }
 ];
 
