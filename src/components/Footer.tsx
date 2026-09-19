@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, ChevronRight, ShieldCheck, Heart } from 'lucide-react';
 import { COMPANY_INFO, PRODUCT_CATEGORIES } from '../data/siteData.ts';
+import { GAYATRI_LOGO } from '../data/logos.ts';
 
 interface FooterProps {
   onNavigateTab: (tab: string) => void;
@@ -19,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onSelectCategory 
           <div className="space-y-4">
             <div className="bg-white p-2 rounded-sm inline-block">
               <img
-                src="./images/gayatri-logo.jpg"
+                src={GAYATRI_LOGO}
                 alt="Gayatri Fabrication Works"
                 className="h-14 w-auto object-contain"
               />

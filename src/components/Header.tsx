@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 import { COMPANY_INFO, PRODUCT_CATEGORIES } from '../data/siteData.ts';
+import { GAYATRI_LOGO, GF_LOGO } from '../data/logos.ts';
 
 interface HeaderProps {
   currentTab: string;
@@ -97,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({
               title="Gayatri Fabrication Works Logo"
             >
               <img 
-                src="./images/gayatri-logo.jpg" 
+                src={GAYATRI_LOGO} 
                 alt="Gayatri Fabrication Works Red and White Logo" 
                 className="h-16 sm:h-20 w-auto object-contain drop-shadow-xs"
               />
@@ -120,7 +121,7 @@ export const Header: React.FC<HeaderProps> = ({
               title="GF Logo Symbol"
             >
               <img 
-                src="./images/logo-2.jpg" 
+                src={GF_LOGO} 
                 alt="GF Red and Blue Logo" 
                 className="h-14 sm:h-16 w-auto object-contain drop-shadow-xs"
               />
@@ -136,12 +137,9 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => handleNavClick('home')}
             >
               <img 
-                src="./images/gayatri-logo.jpg" 
+                src={GAYATRI_LOGO} 
                 alt="Gayatri Fabrication Works Logo" 
                 className="h-16 md:h-20 w-auto object-contain"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
               />
             </div>
 
@@ -161,7 +159,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={() => handleNavClick('home')}
             >
               <img 
-                src="./images/logo-2.jpg" 
+                src={GF_LOGO} 
                 alt="GF Logo Symbol" 
                 className="h-14 md:h-16 w-auto object-contain"
               />

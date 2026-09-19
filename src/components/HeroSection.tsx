@@ -1,6 +1,7 @@
 import React from 'react';
 import { Star, ShieldCheck, Flame, Wrench, Sparkles, ArrowRight, PhoneCall, Award } from 'lucide-react';
 import { PRODUCT_CATEGORIES } from '../data/siteData.ts';
+import { GAYATRI_LOGO } from '../data/logos.ts';
 
 interface HeroSectionProps {
   onNavigateTab: (tab: string) => void;
@@ -111,7 +112,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {PRODUCT_CATEGORIES.slice(0, 10).map((cat) => {
-            const previewImg = cat.items[0]?.image || './images/gayatri-logo.jpg';
+            const previewImg = cat.items[0]?.image || GAYATRI_LOGO;
             return (
               <div
                 key={cat.id}
