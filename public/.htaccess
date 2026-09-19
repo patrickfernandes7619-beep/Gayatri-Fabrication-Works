@@ -1,6 +1,4 @@
-# Apache configuration for Gayatri Fabrication Works
-# Enables automatic serving of compiled dist/ bundle when deployed via cPanel Git Version Control
-
+# Apache configuration for Gayatri Fabrication Works (cPanel / Apache)
 <IfModule mod_mime.c>
   AddType application/javascript .js .mjs
   AddType text/css .css
@@ -14,28 +12,12 @@
   RewriteEngine On
   RewriteBase /
 
-  # 1. Direct access to dist folder passes through
-  RewriteRule ^dist/ - [L]
+  # Do not rewrite existing files or directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
 
-  # 2. When repository is pulled directly into public_html,
-  # serve root requests directly from compiled dist/index.html
-  RewriteCond %{DOCUMENT_ROOT}/dist/index.html -f
-  RewriteRule ^$ dist/index.html [L]
-
-  # 3. Route asset & static file requests to dist/ folder if present
-  RewriteCond %{DOCUMENT_ROOT}/dist/$1 -f [OR]
-  RewriteCond %{DOCUMENT_ROOT}/dist/$1 -d
-  RewriteRule ^(.*)$ dist/$1 [L]
-
-  # 4. Fallback for client-side navigation / refreshing
-  RewriteCond %{DOCUMENT_ROOT}/dist/index.html -f
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ dist/index.html [L]
-
-  # 5. Standard fallback when dist files are copied directly to public_html
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
+  # Redirect all other requests to index.html for Single Page Application routing
   RewriteRule ^ index.html [L]
 </IfModule>
 
