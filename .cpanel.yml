@@ -1,14 +1,8 @@
+
 ---
 deployment:
   tasks:
     - export DEPLOYPATH=/home4/gayatrif/public_html
-    - /bin/rm -rf $DEPLOYPATH/src $DEPLOYPATH/scraped 
-    $DEPLOYPATH/package.json 
-    $DEPLOYPATH/package-lock.json 
-    $DEPLOYPATH/vite.config.ts 
-    $DEPLOYPATH/tsconfig.json 
-    $DEPLOYPATH/metadata.json 
-    $DEPLOYPATH/.env.example 
-    $DEPLOYPATH/README.md 
-    $DEPLOYPATH/bun.lock 2>/dev/null || true
     - /bin/cp -a dist/. $DEPLOYPATH
+
+

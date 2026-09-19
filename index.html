@@ -17,6 +17,28 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // When served on static production web hosting (cPanel / Apache / GitHub Pages)
+      // without Vite development server active, load the compiled production bundle.
+      (function() {
+        var host = window.location.hostname;
+        var isDevServer = host === 'localhost' || host === '127.0.0.1' || host.indexOf('run.app') !== -1;
+        if (!isDevServer && !document.querySelector('script[src*="app.js"]')) {
+          var s = document.createElement('script');
+          s.id = 'cpanel-prod-script';
+          s.type = 'module';
+          s.crossOrigin = 'anonymous';
+          s.src = './dist/assets/app.js';
+          document.body.appendChild(s);
+
+          var l = document.createElement('link');
+          l.id = 'cpanel-prod-style';
+          l.rel = 'stylesheet';
+          l.href = './dist/assets/index.css';
+          document.head.appendChild(l);
+        }
+      })();
+    </script>
   </body>
 </html>
 

@@ -9,6 +9,15 @@ export default defineConfig(() => {
     // custom domains, and standard root hosting without broken asset URLs.
     base: process.env.BASE_PATH || './',
     plugins: [react(), tailwindcss()],
+    build: {
+      rollupOptions: {
+        output: {
+          entryFileNames: 'assets/app.js',
+          chunkFileNames: 'assets/[name].js',
+          assetFileNames: 'assets/[name].[ext]',
+        },
+      },
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
