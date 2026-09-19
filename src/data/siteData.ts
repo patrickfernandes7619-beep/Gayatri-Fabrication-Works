@@ -432,12 +432,6 @@ export const CLIENT_LOGOS: ClientLogo[] = [
     "alt": "Gayatri Fabrication Works Client 3"
   },
   {
-    "id": 9,
-    "filename": "9.jpg",
-    "src": "./images/9.jpg",
-    "alt": "Gayatri Fabrication Works Client 9"
-  },
-  {
     "id": 10,
     "filename": "10.jpg",
     "src": "./images/10.jpg",

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, CheckCircle, Factory, Shield, Users, Clock, ArrowRight } from 'lucide-react';
 import { COMPANY_INFO } from '../data/siteData.ts';
+import { handleImageError } from '../utils/imageHelper.ts';
 
 interface AboutSectionProps {
   onNavigateTab: (tab: string) => void;
@@ -65,6 +66,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigateTab }) => 
                 src="./images/Untitled-1.jpg"
                 alt="Gayatri Fabrication Works Workshop & Production Facility"
                 className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-300"
+                onError={handleImageError}
               />
             </div>
             <div className="absolute bottom-3 left-3 right-3 bg-neutral-900/85 backdrop-blur-xs text-white p-3 rounded-xs text-xs">

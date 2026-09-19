@@ -2,6 +2,7 @@ import React from 'react';
 import { Star, ShieldCheck, Flame, Wrench, Sparkles, ArrowRight, PhoneCall, Award } from 'lucide-react';
 import { PRODUCT_CATEGORIES } from '../data/siteData.ts';
 import { GAYATRI_LOGO } from '../data/logos.ts';
+import { handleImageError } from '../utils/imageHelper.ts';
 
 interface HeroSectionProps {
   onNavigateTab: (tab: string) => void;
@@ -125,6 +126,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     alt={cat.title}
                     className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    onError={handleImageError}
                   />
                 </div>
                 <div className="p-3 flex-1 flex flex-col justify-between">

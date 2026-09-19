@@ -3,6 +3,7 @@ import { Search, ChevronRight, ChevronDown, Filter, Phone, Mail, CheckCircle2 } 
 import { PRODUCT_CATEGORIES } from '../data/siteData.ts';
 import { ProductItem, ProductCategory } from '../types.ts';
 import { ProductModal } from './ProductModal.tsx';
+import { handleImageError } from '../utils/imageHelper.ts';
 
 interface ProductsSectionProps {
   selectedCategorySlug?: string | null;
@@ -252,6 +253,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                           alt={item.title}
                           className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
                           loading="lazy"
+                          onError={handleImageError}
                         />
                         <span className="absolute top-2 right-2 bg-gray-900/60 text-white text-[10px] font-semibold px-1.5 py-0.5 rounded-xs opacity-0 group-hover:opacity-100 transition-opacity">
                           Quick View

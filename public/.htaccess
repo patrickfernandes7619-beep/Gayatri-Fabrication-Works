@@ -12,6 +12,16 @@
   RewriteEngine On
   RewriteBase /
 
+  # Seamlessly route image requests from /images/* to /public/images/* if found there
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/public/images/$1 -f
+  RewriteRule ^images/(.*)$ public/images/$1 [L]
+
+  # Route any public assets if missing at root
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
+  RewriteRule ^(.*)$ public/$1 [L]
+
   # Do not rewrite existing files or directories
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d

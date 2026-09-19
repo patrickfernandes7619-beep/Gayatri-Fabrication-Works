@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award } from 'lucide-react';
 import { CLIENT_LOGOS } from '../data/siteData.ts';
+import { handleImageError } from '../utils/imageHelper.ts';
 
 interface ClienteleSectionProps {
   onNavigateTab: (tab: string) => void;
@@ -38,6 +39,7 @@ export const ClienteleSection: React.FC<ClienteleSectionProps> = ({ onNavigateTa
                   alt={client.alt}
                   className="max-h-full max-w-full object-contain grayscale-0 sm:grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
                   loading="lazy"
+                  onError={handleImageError}
                 />
               </div>
             </div>

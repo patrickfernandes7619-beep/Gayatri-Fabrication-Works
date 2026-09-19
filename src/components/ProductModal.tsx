@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Check, Phone, MessageSquare, Mail, Share2 } from 'lucide-react';
 import { ProductItem } from '../types.ts';
 import { COMPANY_INFO } from '../data/siteData.ts';
+import { handleImageError } from '../utils/imageHelper.ts';
 
 interface ProductModalProps {
   product: ProductItem | null;
@@ -69,6 +70,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                 src={product.image}
                 alt={product.title}
                 className="max-h-72 max-w-full object-contain drop-shadow-sm hover:scale-105 transition-transform duration-300"
+                onError={handleImageError}
               />
             </div>
 

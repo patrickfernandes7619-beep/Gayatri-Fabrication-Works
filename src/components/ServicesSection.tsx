@@ -1,6 +1,7 @@
 import React from 'react';
 import { Wrench, Compass, Flame, ShieldAlert, Cpu, Sparkles, Phone, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { SERVICES_GALLERY, COMPANY_INFO } from '../data/siteData.ts';
+import { handleImageError } from '../utils/imageHelper.ts';
 
 interface ServicesSectionProps {
   onNavigateTab: (tab: string) => void;
@@ -129,6 +130,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                     alt={item.name}
                     className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
+                    onError={handleImageError}
                   />
                 </div>
                 <div className="bg-gray-100 p-2 text-center border-t border-gray-200">
